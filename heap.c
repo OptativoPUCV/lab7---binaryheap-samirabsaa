@@ -21,16 +21,28 @@ void* heap_top(Heap* pq){
 
   //ver si primer elemento es nulo
   if(pq->size == 0)return NULL; 
-  
-  void * aTop = pq->heapArray[0].data; 
-
+  void * aTop = pq->heapArray[0].data;
   return aTop; 
+  
 }
-
-
 
 void heap_push(Heap* pq, void* data, int priority){
 
+  //insertar nuevo dato con prioridad p 
+
+  //si el arreglo está lleno aumentar capacidad (doble + 1) usando realloc
+  //arreglo = realloc(arreglo, nueva_capacidad)
+
+  //verificar si arreglo está lleno y aumentar capacidad
+  if(pq->size == pq->capac ){
+    pq->capac = pq->capac *2 + 1; 
+    pq->heapArray = (heapElem*) realloc(pq->heapArray, sizeof(heapElem)*pq->capac); 
+    
+  }
+  
+
+  
+  
 }
 
 
