@@ -22,7 +22,7 @@ void* heap_top(Heap* pq){
   //ver si primer elemento es nulo
   if(pq == 0)return NULL; 
 
-  return pq->heapArray[0]->data; 
+  return pq->heapArray[0].data; 
 }
 
 
