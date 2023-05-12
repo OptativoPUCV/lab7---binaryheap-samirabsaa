@@ -105,3 +105,14 @@ Fri 12 May 2023 01:00:46 PM UTC:
  tests:  2|2
 total_score: 20/70
 35dec5c
+Fri 12 May 2023 01:02:38 PM UTC: 
+ heap.c | 10 +++-------
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:46:12: error: operation on ‘pq->size’ may be undefined [-Werror=sequence-point]
+   46 |   pq->size = pq->size++;
+      |   ~~~~~~~~~^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+620e38a
