@@ -116,3 +116,9 @@ heap.c:46:12: error: operation on ‘pq->size’ may be undefined [-Werror=seque
 cc1: all warnings being treated as errors
 Compilation failed
 620e38a
+Fri 12 May 2023 01:02:48 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 25/70
+ef62fd2
