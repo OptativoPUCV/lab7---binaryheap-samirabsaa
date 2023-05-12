@@ -21,8 +21,9 @@ void* heap_top(Heap* pq){
 
   //ver si primer elemento es nulo
   if(pq == NULL || pq == 0)return NULL; 
+  void * aTop = pq->heapArray[0].data; 
 
-  else return pq->heapArray[0].data; 
+  return aTop; 
 }
 
 
