@@ -20,3 +20,14 @@ Fri 12 May 2023 12:33:14 PM UTC:
  tests:  1|3
 total_score: 10/70
 44303f0
+Fri 12 May 2023 12:36:15 PM UTC: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:22:10: error: unused variable ‘aTop’ [-Werror=unused-variable]
+   22 |   Heap * aTop = pq->heapArray->data;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f41dbcd
