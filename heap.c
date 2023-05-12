@@ -54,8 +54,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
     aux = padre; 
     
-    pq->heapArray[nuevoD]= aux;
-    printf("%i", aux.priority); 
+    //pq->heapArray[nuevoD]= aux; 
     
     pq->heapArray[(nuevoD-1)/2] = pq->heapArray[nuevoD]; 
     pq->heapArray[nuevoD] = aux; 
