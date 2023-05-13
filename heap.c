@@ -29,16 +29,13 @@ void* heap_top(Heap* pq){
 void heap_push(Heap* pq, void* data, int priority){
 
   //insertar nuevo dato con prioridad p 
-
   //si el arreglo está lleno aumentar capacidad (doble + 1) usando realloc
   //arreglo = realloc(arreglo, nueva_capacidad)
-
   //verificar si arreglo está lleno y aumentar capacidad
   if(pq->size == pq->capac ){
     pq->capac = pq->capac *2 + 1; 
     pq->heapArray = (heapElem*) realloc(pq->heapArray, sizeof(heapElem)*pq->capac); 
   }
-
   int nuevoD = pq->size; 
   pq->heapArray[nuevoD].data = data; 
   pq->heapArray[nuevoD].priority = priority; 
@@ -47,30 +44,28 @@ void heap_push(Heap* pq, void* data, int priority){
 
  heapElem padre, aux; 
   while(nuevoD!=0){
-    
     padre = pq->heapArray[(nuevoD-1)/2];
-
     if(padre.priority > pq->heapArray[nuevoD].priority)break; 
 
     aux = padre; 
-    
-    //pq->heapArray[nuevoD]= aux; 
     
     pq->heapArray[(nuevoD-1)/2] = pq->heapArray[nuevoD]; 
     pq->heapArray[nuevoD] = aux; 
 
     nuevoD= (nuevoD -1)/2; 
-    
   }
 
-
-  
 }
 
 void heap_pop(Heap* pq){
 
   //si el montículo esta vacío 
   if(pq->size ==0) return; 
+
+  //se elimina el mayor elemento 
+  pq->heapArray[0] = pq->heapArray[pq->size-1]; 
+
+  
 
 }
 
