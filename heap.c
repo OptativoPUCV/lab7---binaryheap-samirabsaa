@@ -79,7 +79,7 @@ void heap_pop(Heap* pq){
 
   while(true){
     hijoI = 2 * aux + 1; //aux ?
-    hijoD = 2 * pq->size + 2;
+    hijoD = 2 * aux + 2;
 
 
     //hijo izquierdo es mayor que aux
