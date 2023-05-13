@@ -67,11 +67,10 @@ void heap_push(Heap* pq, void* data, int priority){
   
 }
 
-
-
-
-
 void heap_pop(Heap* pq){
+
+  //si el montículo esta vacío 
+  if(pq->size ==0) return; 
 
 }
 
