@@ -164,3 +164,17 @@ Sat 13 May 2023 02:38:36 AM UTC:
  tests:  7|1
 total_score: 45/70
 ba96580
+Sat 13 May 2023 12:33:36 PM UTC: 
+ heap.c | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:75:22: error: variable ‘padre’ set but not used [-Werror=unused-but-set-variable]
+   75 |   int hijoI, hijoD , padre;
+      |                      ^~~~~
+heap.c:75:14: error: variable ‘hijoD’ set but not used [-Werror=unused-but-set-variable]
+   75 |   int hijoI, hijoD , padre;
+      |              ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+80c00ee
