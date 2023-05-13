@@ -78,7 +78,7 @@ void heap_pop(Heap* pq){
   //padre = (pq->size-1)/2; 
 
   while(true){
-    hijoI = 2 * pq->size + 1; //aux ?
+    hijoI = 2 * aux + 1; //aux ?
     hijoD = 2 * pq->size + 2;
 
 
