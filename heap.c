@@ -94,16 +94,11 @@ void heap_pop(Heap* pq){
 
     if(aux == padre) break;
 
-    
-    
+    heapElem nuevo = pq->heapArray[aux]; 
+    pq->heapArray[aux] = pq->heapArray[padre];
+    pq->heapArray[padre] = nuevo; 
+    aux = padre; 
   }
-
-  
-
-  
-
-  
-
 }
 
 Heap* createHeap(){
