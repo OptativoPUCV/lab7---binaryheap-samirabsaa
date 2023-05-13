@@ -87,11 +87,12 @@ void heap_pop(Heap* pq){
     else padre = aux; 
 
 
-    //hijo derecho es mayor que aux
-    
+    //hijo derecho es mayor que padre
+    if(hijoD < pq->size && pq->heapArray[hijoD].priority > pq->heapArray[padre].priority) padre = hijoD;
 
     //aux es el mayor se termina ciclo 
-    
+
+    if(aux == padre) break;
 
     
     
