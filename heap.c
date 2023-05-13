@@ -63,7 +63,10 @@ void heap_pop(Heap* pq){
   if(pq->size ==0) return; 
 
   //se elimina el mayor elemento 
-  pq->heapArray[0] = pq->heapArray[pq->size-1]; 
+  pq->heapArray[0] = pq->heapArray[pq->size-1];
+  pq->size= pq->size-1;
+
+  
 
   
 
